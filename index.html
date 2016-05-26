@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Get the quote for your website</title>
+        <meta charset="utf-8">
+        <link href="styles/style.css" rel="stylesheet">
+        
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <!-- Load fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Philosopher|Cookie|Open+Sans' rel='stylesheet' type='text/css'>
+    
+    </head>
+    <body class="container-fluid">
+    	
+        <div class="jumbotron>">
+        	<div class="container">
+        
+                <h1>Hello There!</h1>
+                <h3>Are you planing for your webstie?</h3>
+                <h4>Get a qoute of your webiste from us...</h4>
+        	
+            </div>
+        </div>
+		
+     
+        	
+        		
+                
+                	<!-- multistep form -->
+            <form id="msform" >
+    
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Personal Details</li>
+                    <li>Requirements-part 1</li>
+                    <li>Requirements-part 2</li>
+                    <li>Notes</li>
+                </ul>
+    
+                <!-- fieldsets -->
+                <fieldset>
+                    <h2 class="fs-title">Personal Details</h2>
+                    <h3 class="fs-subtitle">Step 1</h3>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" class="form-control" id="fullname">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email">
+                    <label for="gplus">Google Plus</label>
+                    <input type="text" class="form-control" id="gplus">
+                    <input type="button"  class="next action-button btn btn-primary pull-right" value="Next">
+                </fieldset>
+    
+                <fieldset>
+                    <h2 class="fs-title" >Requirements - Part 1</h2>
+                    <h3 class="fs-subtitle">Step 2</h3>
+                    <select id="wb-type">
+                        <option value="select"  class="form-control">Select Website Type</option>
+                        <option>Static</option>
+                        <option>Media</option>
+                    </select>
+                    <select id="wb-photo">
+                        <option value="select">Graphics provided by ...</option>
+                        <option>Client</option>
+                        <option>Developer</option>
+                    </select>
+                    <input type="button" class="previous action-button btn btn-primary pull-left" value="Previous">
+                    <input type="button" class="next action-button btn btn-primary pull-right" value="Next">
+                </fieldset>
+    
+                <fieldset>
+                    <h2 class="fs-title">Requirements - Part 2</h2>
+                    <h3 class="fs-subtitle">Step 3</h3>
+                    <select id="wb-logo">
+                        <option value="select">Logo needed?</option>
+                        <option>I have web ready logo</option>
+                        <option>I need the update of the existing logo</option>
+                        <option>I need logo to be created from scratch</option>
+                    </select>
+                    <select id="wb-video">
+                        <option value="select">Video ...</option>
+                        <option>A part of the website content will be based on videos</option>
+                        <option>Most of the website content will be based on videos</option>
+                    </select>
+                    <input type="button" class="previous action-button btn btn-primary pull-left" value="Previous">
+                    <input type="button" class="next action-button btn btn-primary pull-right" value="Next">
+                </fieldset>
+    
+                <fieldset>
+                    <h2 class="fs-title">Notes</h2>
+                    <h3 class="fs-subtitle">Step 4</h3>
+                    <textarea id="notes" placeholder="Any notes?"></textarea>
+                    <input type="button" class="previous action-button btn btn-primary pull-left" value="Previous">
+                    <input type="submit" id="submit" class="btn btn-success pull-right" value="Submit">
+                </fieldset>
+                <p class="feedback"></p>
+                <p class="error"></p>
+            </form>
+     
+
+        	
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/validate.js"></script>
+    </body>
+</html>

@@ -1,0 +1,209 @@
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+}
+
+h1{
+	font-family : 'Cookie';
+	font-size:5em;
+}
+
+
+
+
+/*form styles*/
+#msform {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+	padding: 25px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: absolute;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+
+
+
+/*inputs*/
+#msform input, #msform textarea{
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#notes{
+    height: 250px;
+}
+
+label{
+    display: block;
+    text-align: left;
+    color: #666;
+    font-size: 12px;
+}
+
+
+
+
+/*buttons*/
+#msform .action-button, #msform #submit{
+    width: 100px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus,
+#msform #submit:hover,
+#msform #submit:focus{
+    /* your style for buttons on hover and focus */
+}
+
+
+
+
+/*headings*/
+.fs-title {
+    margin-bottom: 10px;
+}
+
+.fs-subtitle {
+    margin-bottom: 20px;
+}
+
+
+
+
+/*progressbar*/
+#progressbar {
+    margin: 30px 0;
+    padding-top: 10px;
+    overflow: hidden;
+    /*The counter-reset property allows for automatic numbering of elements.
+      Like an ordered list (<ol>), but it works on any element.
+      The counters are applied via the content property.
+      https://css-tricks.com/almanac/properties/c/counter-reset/*/
+    counter-reset: step; /*variable 'step' takes the initial value 0*/
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: black;
+    font-size: 9px;
+    width: 25%;
+    float: left;
+    position: relative; /*connectors which are set absolute will be aligned to the list-item*/
+}
+
+#progressbar li:before {
+    /*increments numbers
+      https://css-tricks.com/almanac/properties/c/counter-increment/*/
+    counter-increment: step; /* Increments the section counter*  */
+
+    /*counter(step) function creates box for numbers and ordinal numbers for progress bar*/
+    content: counter(step); /* display the counter */
+
+    width: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border: 1px solid black;
+    margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    /*put the bar (connector) behind the boxes with numbers*/
+    content: '';
+    width: 100%;
+    height: 1px;
+    border: 1px solid black;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 5px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps black*/
+/*The number of the step and the connector before it = black*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: black;
+    color: white;
+}
+
+.error{
+    background-color:coral;
+    color: white;
+    width: 80%;
+    margin: 0 10%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.feedback{
+    background-color: forestgreen;
+    color: white;
+    width: 80%;
+    margin: 0 10%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 800px){
+    #msform {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1025px){
+    #msform {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    #msform {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px){
+    #msform {
+        width: 60%;
+    }
+}
